@@ -19,7 +19,11 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "bitcoinaverage": "^1.2.1",
+    "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -44,5 +48,18 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesctucker/learn-angular-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesctucker/learn-angular-app/issues"
+  },
+  "homepage": "https://github.com/jamesctucker/learn-angular-app#readme"
 }
