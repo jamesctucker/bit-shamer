@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getPrice() {
-    return this.http.get('https://api.coincap.io/v2/assets/bitcoin/history?interval=d1')
+    return this.http.get('https://api.coincap.io/v2/assets')
   }
 }

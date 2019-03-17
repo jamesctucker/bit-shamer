@@ -2,8 +2,14 @@
 
 <div>
     <ul *ngIf="results">
-        <li *ngFor="let result of results.data">
-            <p>{{ result.priceUsd }}</p>
+        <li>
+            <p>Current Price: ${{ Math.ceil(results.data[0].priceUsd) }}</p>
+        </li>
+        <li>
+            <p>Peak Price: $20985</p>
+        </li>
+        <li>
+            <p>-{{ Math.ceil((20985 - results.data[0].priceUsd) / 20985 * 100) }}%</p>
         </li>
     </ul>
     <input placeholder="Select date" />
