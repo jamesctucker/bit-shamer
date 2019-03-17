@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 
 // Route includes
-const apiRouter = require('./api.router');
+const historyRouter = require('./history.api.router');
 
 
 
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 /* Routes */
-app.use('/api', apiRouter);
+app.use('/api/history', historyRouter);
 
 
 // Serve static files

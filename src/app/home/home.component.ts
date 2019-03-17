@@ -4,18 +4,19 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [DataService]
 })
 export class HomeComponent implements OnInit {
 
-  users: Object;
+  results: Object;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      this.users = data
-      console.log(this.users);
+    this.data.getPrice().subscribe(data => {
+      this.results = data
+      console.log(this.results);
     }
     );
   }
