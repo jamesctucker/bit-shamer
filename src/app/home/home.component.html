@@ -12,5 +12,7 @@
             <p>-{{ Math.ceil((20985 - results.data[0].priceUsd) / 20985 * 100) }}%</p>
         </li>
     </ul>
-    <input placeholder="Select date" />
+    <h3>Find out how rich you would've been!</h3>
+    <input type="number" [(ngModel)]='bitcoinCount' class="form-control" placeholder="Enter an amount">
+    <h2>${{ Math.ceil(results.data[0].priceUsd) * bitcoinCount }}</h2>
 </div>
