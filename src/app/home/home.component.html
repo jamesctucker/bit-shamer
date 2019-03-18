@@ -1,18 +1,48 @@
-<h1 [class.gray]="h1Style">Home</h1>
-
 <div>
-    <ul *ngIf="results">
-        <li>
-            <p>Current Price: ${{ Math.ceil(results.data[0].priceUsd) }}</p>
-        </li>
-        <li>
-            <p>Peak Price: $20985</p>
-        </li>
-        <li>
-            <p>-{{ Math.ceil((20985 - results.data[0].priceUsd) / 20985 * 100) }}%</p>
-        </li>
-    </ul>
-    <h3>Find out how rich you would've been!</h3>
-    <input type="number" [(ngModel)]='bitcoinCount' class="form-control" placeholder="Enter an amount">
-    <h2>${{ Math.ceil(results.data[0].priceUsd) * bitcoinCount }}</h2>
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenStatus = true" (closed)="panelOpenStatus = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Peak Price
+
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{panelOpenStatus ? 'Bitcoin reached its all-time high on December 17, 2017' : ''}}
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+
+            <p>$19873</p>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Current Price
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{panelOpenState ? 'Oh, how the mighty have fallen!' : ''}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>${{ Math.ceil(results.data[0].priceUsd) }}</p>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpen = true" (closed)="panelOpen = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    What Could've Been
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{panelOpen ? 'I hope you did not buy at peak price...' : ''}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>How many bitcoin do you have?</p>
+            <input matInput [(ngModel)]='bitcoinCount' class="form-control" placeholder="Enter amount">
+            <p>Your almost fortune (if you sold back in 2017):
+                ${{ 19873 * bitcoinCount }}</p>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
 </div>

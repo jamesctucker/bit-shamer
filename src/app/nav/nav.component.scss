@@ -1,8 +1,12 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
 header {
     background: #7700FF;
 
     .logo {
         font-weight: bold;
+        font-size: 28px;
     }
 
     nav {
@@ -28,3 +32,4 @@ header {
         }
     }
 }
+

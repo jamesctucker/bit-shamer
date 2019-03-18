@@ -4,7 +4,8 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  providers: [DataService]
+  providers: [DataService],
+  styleUrls: ['./home.component.scss'],
 })
 
 
@@ -18,6 +19,8 @@ export class HomeComponent implements OnInit {
   results: Object;
 
   bitcoinCount: number;
+
+  panelOpenState = false;
 
   constructor(private data: DataService) {
     this.bitcoinCount = 0;

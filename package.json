@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@fortawesome/angular-fontawesome": "^0.3.0",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "axios": "^0.18.0",
     "bitcoinaverage": "^1.2.1",
     "body-parser": "^1.18.3",
